@@ -11,8 +11,6 @@
     <groupId>at.iteratec.calculator</groupId>
     <artifactId>beispiel</artifactId>
     <version>1.0.0</version>
-    <name>Beispiel</name>
-    <description>Microservices mit Spring Boot</description>
 
     <dependencies>
         <dependency>
