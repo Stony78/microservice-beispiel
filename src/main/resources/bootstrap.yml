@@ -5,6 +5,11 @@ server:
 spring:
   application:
     name: add
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config
 
 management:
   endpoints:
