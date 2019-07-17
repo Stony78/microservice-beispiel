@@ -1,5 +1,7 @@
 package at.iteratec.calculator.beispiel;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -10,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 @RestController
 public class AdditionResource {
+    private Logger logger = LoggerFactory.getLogger(AdditionResource.class);
+
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     private LoggingService loggingService;
@@ -19,6 +23,8 @@ public class AdditionResource {
 
     @GetMapping("/api/add")
     public String add(@RequestParam String o1, @RequestParam String o2) {
+        logger.info("Anfrage: {} + {}", o1, o2);
+
         int v1 = Integer.parseInt(o1, radix);
         int v2 = Integer.parseInt(o2, radix);
         String result = Integer.toString(v1 + v2, radix);
