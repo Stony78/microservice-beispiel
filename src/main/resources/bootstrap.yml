@@ -1,5 +1,5 @@
 server:
-  address: localhost
+  address: 10.16.20.94
 
 spring:
   application:
