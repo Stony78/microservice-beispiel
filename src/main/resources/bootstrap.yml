@@ -1,5 +1,4 @@
 server:
-  port: 10001
   address: localhost
 
 spring:
@@ -12,7 +11,7 @@ management:
       exposure:
         include: "*"
   server:
-    port: 11001
+    port: 8090
 
 eureka:
   instance:
