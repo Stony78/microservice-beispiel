@@ -1,7 +1,7 @@
 package at.iteratec.calculator.addition;
 
 
-import at.iteratec.calculator.subtraktion.LoggingServiceFallback;
+import at.iteratec.calculator.addition.LoggingServiceFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
